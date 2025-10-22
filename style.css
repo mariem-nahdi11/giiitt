@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F5E6DA;
+}
+
+.container {
+  background: #FFF5EE;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+.container:hover {
+  transform: scale(1.02);
+}
+
+/* === En-tête === */
+.header h1 {
+  margin: 0;
+  color: #8B5E3C;
+}
+.header p {
+  color: #A67C52;
+}
+.header a {
+  color: #8B5E3C;
+  text-decoration: none;
+}
+.header a:hover {
+  text-decoration: underline;
+}
+
+/* === Photo === */
+.photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 10px;
+  border: 3px solid #C7A17A;
+}
+
+/* === Sections === */
+.section {
+  margin-top: 20px;
+  text-align: left;
+}
+.section h2 {
+  background: #C7A17A;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+.section p, .section ul {
+  margin-left: 15px;
+  color: #5E4633;
+}
+.section ul {
+  padding-left: 20px;
+}
+
+/* === Animation === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.header {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* === Grille === */
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Bouton PDF === */
+.btn-download {
+  background-color: #C7A17A;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.btn-download:hover {
+  background-color: #8B5E3C;
+  transition: 0.3s;
+}
